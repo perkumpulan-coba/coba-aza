@@ -101,13 +101,15 @@ body {
 /* --------------- Hero ---------------- */
 .hero {
   min-height: calc(100vh - 60px);
-  background: url("../images/produk1.jpg") center/cover no-repeat;
-  -webkit-clip-path: polygon(100% 0, 100% 77%, 0 100%, 0 0);
+  /* background: url("../images/orang1.jpg") center/cover no-repeat; */
+  background-size: auto 120%; /* Mengatur background-size untuk menyeimbangkan ukuran gambar */
+  -webkit-clip-path: polygon(100% 0, 100% 80%, 0 100%, 0 0);
   clip-path: polygon(100% 0, 100% 80%, 0 100%, 0 0);
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 
 .banner {
   text-align: center;
@@ -370,4 +372,103 @@ h4 {
 .about-description p {
   font-size: 1.1rem;
   line-height: 1.8;
+}
+.banner-logo {
+  display: block;
+  margin: 0 auto;
+  max-width: 200px; /* Sesuaikan ukuran logo sesuai kebutuhan */
+  height: auto;
+}
+/* Slideshow container */
+.slideshow-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1; /* Ensure the slideshow is behind the banner */
+  background-color: #f0f0f0; /* Ubah warna background menjadi abu-abu */
+}
+
+/* Slides */
+.mySlides {
+  display: none;
+  width: 50%;
+  margin: 0 auto; /* Center the slides horizontally */
+}
+
+.mySlides img {
+  width: 100%; /* Ensure images inside slides fill the slide */
+}
+
+/* Fade animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from { opacity: .4; transform: scale(1.1); } 
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fade {
+  from { opacity: .4; transform: scale(1.1); } 
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Adjust banner styling to ensure visibility over slideshow */
+.hero .banner {
+  position: relative;
+  z-index: 1;
+}
+
+
+
+
+/* Footer styles */
+.footer {
+  background: var(--accent);
+  color: var(--mainWhite);
+  padding: 2rem 0;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.footer-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.footer ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer li {
+  margin-bottom: 0.5rem;
+}
+
+.footer a {
+  color: var(--mainWhite);
+  text-decoration: none;
+  transition: var(--mainTransition);
+}
+
+.footer a:hover {
+  color: var(--primaryColor);
+}
+
+.footer p {
+  margin-top: 1rem;
+  font-size: 0.9rem;
 }

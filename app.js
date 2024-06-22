@@ -17,7 +17,7 @@ const mockData = {
     {
       "sys": { "id": "1" },
       "fields": {
-        "title": "queen panel bed",
+        "title": "tempat atk dari sedotan",
         "price": 10000,
         "image": { "fields": { "file": { "url": "./images/produk1.jpg" } } }
       }
@@ -25,7 +25,7 @@ const mockData = {
     {
       "sys": { "id": "2" },
       "fields": {
-        "title": "king panel bed",
+        "title": "⁠tempat serbaguna dari sedotan",
         "price": 12000,
         "image": { "fields": { "file": { "url": "./images/produk2.jpg" } } }
       }
@@ -33,24 +33,24 @@ const mockData = {
     {
       "sys": { "id": "3" },
       "fields": {
-        "title": "king panel bed",
-        "price": 15000,
+        "title": "vas bunga kaca",
+        "price": 20000,
         "image": { "fields": { "file": { "url": "./images/produk3.jpg" } } }
       }
     },
     {
       "sys": { "id": "4" },
       "fields": {
-        "title": "king panel bed",
-        "price": 16000,
+        "title": "tempat atk dari botol plastik",
+        "price": 12000,
         "image": { "fields": { "file": { "url": "./images/produk4.jpg" } } }
       }
     },
     {
       "sys": { "id": "5" },
       "fields": {
-        "title": "single panel bed",
-        "price": 18000,
+        "title": "⁠rak serbaguna paperbowl",
+        "price": 20000,
         "image": { "fields": { "file": { "url": "./images/produk5.jpg" } } }
       }
     }
@@ -312,3 +312,19 @@ function setupCheckoutButton() {
     window.open(`https://wa.me/${whatsappNumber}?text=${encodedMessage}`, "_blank");
   });
 }
+document.addEventListener('DOMContentLoaded', function() {
+  let slideIndex = 0;
+  showSlides();
+
+  function showSlides() {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    slides[slideIndex-1].style.display = "block";  
+    setTimeout(showSlides, 3000); // Change image every 3 seconds
+  }
+});
